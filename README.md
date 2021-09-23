@@ -47,3 +47,11 @@ docker-compose exec api python project/manage.py test
 ## License
 
 The MIT License - Copyright (c) 2021 - Present, Decagon Institute. https://decagonhq.com/
+
+## Contributors
+[![](https://github.com/Rafiatu.png?size=100)](https://github.com/Rafiatu)
+[![](https://github.com/sunday-ucheawaji.png?size=100)](https://github.com/sunday-ucheawaji)
+[![](https://github.com/folukeakpobasa.png?size=100)](https://github.com/folukeakpobasa)
+[![](https://github.com/olawale-kareem.png?size=100)](https://github.com/olawale-kareem)
+[![](https://github.com/Moshood-Wale.png?size=100)](https://github.com/Moshood-Wale)
+[![](https://github.com/iamJibs.png?size=100)](https://github.com/iamJibs)
