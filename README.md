@@ -49,10 +49,10 @@ docker-compose exec api python project/manage.py test
 The MIT License - Copyright (c) 2021 - Present, Decagon Institute. https://decagonhq.com/
 
 ## Contributors
-![alt text](https://github.com/Rafiatu.png)
-<!-- [![](https://github.com/Rafiatu.png)](https://github.com/Rafiatu) -->
-[![](https://github.com/sunday-ucheawaji.png)](https://github.com/sunday-ucheawaji)
-[![](https://github.com/folukeakpobasa.png)](https://github.com/folukeakpobasa)
-[![](https://github.com/olawale-kareem.png)](https://github.com/olawale-kareem)
-[![](https://github.com/Moshood-Wale.png)](https://github.com/Moshood-Wale)
-[![](https://github.com/iamJibs.png)](https://github.com/iamJibs)
+
+[![](https://github.com/Rafiatu.png?size=50)](https://github.com/Rafiatu)
+[![](https://github.com/sunday-ucheawaji.png?size=50)](https://github.com/sunday-ucheawaji)
+[![](https://github.com/folukeakpobasa.png?size=50)](https://github.com/folukeakpobasa)
+[![](https://github.com/olawale-kareem.png?size=50)](https://github.com/olawale-kareem)
+[![](https://github.com/Moshood-Wale.png?size=50)](https://github.com/Moshood-Wale)
+[![](https://github.com/iamJibs.png?size=50)](https://github.com/iamJibs)
