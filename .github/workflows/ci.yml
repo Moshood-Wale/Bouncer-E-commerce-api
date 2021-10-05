@@ -16,8 +16,9 @@ jobs:
           time: '10s'
       - name: Show Services Logs
         run: docker-compose -f docker-compose.test.yml logs
-      - name: Run Migrations
+      - name: Make Migrations
         run: bin/exec makemigrations db
+      - name: Run Migrations
         run: bin/exec migrate
       - name: Run Tests
         run: bin/exec test --noinput
