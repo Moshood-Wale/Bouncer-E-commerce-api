@@ -32,7 +32,7 @@ In summary, these are the lists of commands to run in listed order, to start up 
 2. cd teamB-bouncer-api
 3. docker build .
 4. docker-compose up
-5. docker-compose exec api python project/manage.py makemigrations
+5. docker-compose exec api python project/manage.py makemigrations db
 6. docker-compose exec api python project/manage.py migrate
 ```
 
@@ -56,4 +56,3 @@ The MIT License - Copyright (c) 2021 - Present, Decagon Institute. https://decag
 [![](https://github.com/olawale-kareem.png)](https://github.com/olawale-kareem)
 [![](https://github.com/Moshood-Wale.png)](https://github.com/Moshood-Wale)
 [![](https://github.com/iamJibs.png)](https://github.com/iamJibs)
-

@@ -1,13 +1,13 @@
 version: '3.7'
 
 x-db-envs: &db-envs
-  POSTGRES_DB: devsprimedb
+  POSTGRES_DB: bouncer
   POSTGRES_PASSWORD: password
   POSTGRES_USER: postgres
 
 x-api-vars: &api-vars
   ALLOWED_HOSTS: 127.0.0.1,localhost
-  DATABASE_URL: postgres://postgres:password@db:5432/devsprimedb
+  DATABASE_URL: postgres://postgres:password@db:5432/bouncer
   DEBUG: 1
   SECRET_KEY: SOME_RANDOM_SET_OF_CHARACTERS_USED_AS_SECRET_KEY_#
 

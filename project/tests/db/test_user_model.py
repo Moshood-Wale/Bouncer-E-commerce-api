@@ -24,7 +24,7 @@ class UserModelTest(TestCase):
         user_uuid = User.objects.all().first().id
         user = User.objects.get(id=user_uuid)
         max_length = user._meta.get_field('first_name').max_length
-        self.assertEqual(max_length, 30)
+        self.assertEqual(max_length, 250)
 
     def test_last_name_label(self):
         user_uuid = User.objects.all().first().id
@@ -36,7 +36,7 @@ class UserModelTest(TestCase):
         user_uuid = User.objects.all().first().id
         user = User.objects.get(id=user_uuid)
         max_length = user._meta.get_field('last_name').max_length
-        self.assertEqual(max_length, 30)
+        self.assertEqual(max_length, 250)
 
     def test_otp_label(self):
         user_uuid = User.objects.all().first().id
