@@ -1,9 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractBaseUser
 import uuid
 
 
-class User(AbstractUser):
+class User(AbstractBaseUser):
     id = models.UUIDField(primary_key=True, unique=True, default=uuid.uuid4, editable=False)
     first_name = models.CharField(max_length=250)
     last_name = models.CharField(max_length=250)
