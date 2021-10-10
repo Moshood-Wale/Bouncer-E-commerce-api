@@ -24,7 +24,7 @@ class RegisterView(CreateAPIView):
                 email = serializer.validated_data['email'],
                 password = serializer.validated_data['password'],
                 otp_code = Util.generate_otp()
-                if User.objects.filter(email=email).exists():
+                if User.objects.filter(email=email[0]).exists():
                     return Response({"message": "User with this email already exists"}, status=status.HTTP_400_BAD_REQUEST)
                 # Verification link
                 current_site = get_current_site(request).domain
