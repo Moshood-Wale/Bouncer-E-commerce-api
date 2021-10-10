@@ -1,8 +1,10 @@
 from django.urls import path
-from config.views import index
+from api.views.verify_otp_views import VerifyOTPView
 from api.views.register_view import RegisterView
 
+
 urlpatterns = [
-    path('', index),
     path('register/', RegisterView.as_view(), name='register'),
+    path('otp/verify/', VerifyOTPView.as_view(), name='verify'),
+
 ]
