@@ -2,11 +2,12 @@ from db.models import User
 from db.serializers.verify_otp_serializers import VerifyOTPSerializer
 from rest_framework.response import Response
 from rest_framework import generics, status
+from rest_framework.permissions import AllowAny
 
 
 class VerifyOTPView(generics.GenericAPIView):
     serializer_class = VerifyOTPSerializer
-    
+    permission_classes = [AllowAny]
     
     def post(self, request):
         serializer = VerifyOTPSerializer(data=request.data)

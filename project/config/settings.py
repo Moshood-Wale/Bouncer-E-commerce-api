@@ -17,7 +17,6 @@ SECRET_KEY = config('SECRET_KEY', default=get_random_secret_key(), cast=str)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
-
 ALLOWED_HOSTS = ['*']
 
 WHITENOISE_AUTOREFRESH = True
@@ -38,6 +37,7 @@ INSTALLED_APPS = [
 
     # Third Party Libraries
     'rest_framework',
+    'rest_framework.authtoken',
 
 ]
 
@@ -124,6 +124,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "db.User"
 SITE_ID = 1
+
+REST_FRAMEWORK ={
+    'DEFAULT_AUTHETICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthetication',
+    ],
+    
+    'DEFAULT_PERMISSION_CLASSES':[
+        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

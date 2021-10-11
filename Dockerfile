@@ -22,6 +22,7 @@ COPY Dockerfile ./.env* ./
 
 COPY ./requirements.txt .
 
+
 COPY ./project ./project
 
 COPY ./bin/container ./bin
