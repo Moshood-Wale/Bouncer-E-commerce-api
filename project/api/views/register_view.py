@@ -52,10 +52,9 @@ class RegisterView(CreateAPIView):
                     otp_code=otp_code
                 )
                 user.save()
-
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
-            except Exception:
-                return Response(
-                    {'error': 'unable to register user, please ensure your details are correct'},
-                    status=status.HTTP_400_BAD_REQUEST)
+
+            except Exception as err:
+                return Response({'error': str(err)}, status=status.HTTP_400_BAD_REQUEST)
+              
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

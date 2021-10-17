@@ -4,6 +4,7 @@ from api.views.register_view import RegisterView
 from api.views.login import LoginAPIView
 from api.views.logout_view import LogoutAPIView
 from api.views.forgot_password_view import ForgotPasswordView
+from api.views.password_reset import SetNewPasswordAPIView
 
 
 urlpatterns = [
@@ -12,4 +13,5 @@ urlpatterns = [
     path('login/', LoginAPIView.as_view(), name = 'login'),
     path('logout/',LogoutAPIView.as_view(), name = 'logout'),
     path('forgot-password/', ForgotPasswordView.as_view(), name='forgot-password'),
+    path('reset-password/', SetNewPasswordAPIView.as_view(), name='reset-password'),
 ]

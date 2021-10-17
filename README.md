@@ -39,7 +39,7 @@ In summary, these are the lists of commands to run in listed order, to start up 
 ## Running Tests
 
 Currently, truthy tests has been provided in each of the application defined in the project, before running the tests with the following command make sure that your api service is up and running.
-
+ 
 ```docker
 docker-compose exec api python project/manage.py test
 ```

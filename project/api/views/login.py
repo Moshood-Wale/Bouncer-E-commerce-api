@@ -18,6 +18,9 @@ class LoginAPIView(generics.GenericAPIView):
             password = serializer.validated_data["password"]
             try:
                 user = User.objects.get(email=email)
+                if not user.is_verified:
+                    return Response({"message": "Please verify your email first"}, status=status.HTTP_400_BAD_REQUEST)
+
                 if user.password == password:
                     token, created = Token.objects.get_or_create(user=user)
                     return Response({
@@ -27,4 +30,5 @@ class LoginAPIView(generics.GenericAPIView):
                 return Response({"message": "Incorrect Password"}, status=status.HTTP_400_BAD_REQUEST)
             except Exception as e:
                 return Response({"message": "Invalid Login"}, status=status.HTTP_400_BAD_REQUEST)
+
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
