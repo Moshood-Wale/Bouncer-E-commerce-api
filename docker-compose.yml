@@ -31,7 +31,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./tmp:/teamB-bouncer-api/tmp
-      - ./project:/teamB-bouncer-api/project
-      - ./bin/container:/teamB-bouncer-api/bin
-      - ./requirements.txt:/teamB-bouncer-api/requirements.txt
+      - ./tmp:/bouncerb/tmp
+      - ./project:/bouncerb/project
+      - ./bin/container:/bouncerb/bin
+      - ./requirements.txt:/bouncerb/requirements.txt
