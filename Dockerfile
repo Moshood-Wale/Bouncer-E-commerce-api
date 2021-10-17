@@ -27,6 +27,7 @@ COPY ./project ./project
 
 COPY ./bin/container ./bin
 
+
 RUN bin/install
 
 # Production Like Environment

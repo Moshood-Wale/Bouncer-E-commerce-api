@@ -37,6 +37,7 @@ INSTALLED_APPS = [
 
     # Third Party Libraries
     'rest_framework',
+    'rest_framework_simplejwt',
     'rest_framework.authtoken',
 
 ]

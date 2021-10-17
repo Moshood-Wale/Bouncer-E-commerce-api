@@ -28,7 +28,8 @@ class ForgotPasswordView(generics.GenericAPIView):
                 data = {'email_body': email_body, 'to_email': [email], 'email_subject': 'Reset your password on Bouncer'}
                 Util.send_email(data)
                 return Response({"message": "OTP sent to your mail"}, status=status.HTTP_200_OK)
+              
             except Exception as error:
-                return Response({"message": error.message}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({"message": str(error)}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
