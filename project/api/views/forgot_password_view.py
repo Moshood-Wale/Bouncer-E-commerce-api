@@ -23,7 +23,7 @@ class ForgotPasswordView(generics.GenericAPIView):
                 user.save()
                 current_site = get_current_site(request=request).domain 
                 print(current_site)
-                absurl = f"http://{current_site}/reset-password/"
+                absurl = f"http://{current_site}/api/v1/reset-password/"
                 email_body = f"Hello, \n Use this link {absurl} with OTP {otp_code} to reset your password \n"  
                 data = {'email_body': email_body, 'to_email': [email], 'email_subject': 'Reset your password on Bouncer'}
                 Util.send_email(data)

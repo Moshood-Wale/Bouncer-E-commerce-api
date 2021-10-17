@@ -16,7 +16,7 @@ ENV PYTHONUNBUFFERED=1
 
 ENV PYTHONDONTWRITEBYTECODE=1
 
-WORKDIR /teamB-bouncer-api
+WORKDIR /bouncerb
 
 COPY Dockerfile ./.env* ./
 
