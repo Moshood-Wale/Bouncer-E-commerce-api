@@ -33,15 +33,15 @@ class Product(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=50, unique=True)
     image = models.URLField()
-    price = models.DecimalField(max_digits=20, decimal_places=2)              
+    price = models.DecimalField(max_digits=20, decimal_places=2)
     category = models.ForeignKey(
         Category, on_delete=models.CASCADE, related_name='category')
     label = models.CharField(max_length=100)
     brand = models.ForeignKey(
         Brand, on_delete=models.CASCADE, related_name='brand')
     quantity_in_stock = models.IntegerField()
-    discounted_price = models.DecimalField(max_digits=10, decimal_places=2)            
-    shipping_fee = models.DecimalField(max_digits=10, decimal_places=2)                
+    discounted_price = models.DecimalField(max_digits=10, decimal_places=2)
+    shipping_fee = models.DecimalField(max_digits=10, decimal_places=2)
     size = models.CharField(
         max_length=50, choices=SIZE_CHOICES, default=MEDIUM)
     description = models.TextField(max_length=50)
@@ -55,3 +55,4 @@ class Product(models.Model):
 
     class Meta:
         verbose_name_plural = 'Products'
+        ordering = ['-created_at']
