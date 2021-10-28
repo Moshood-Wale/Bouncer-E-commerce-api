@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'rest_framework.authtoken',
+    'django_filters',
 
 ]
 
@@ -126,15 +127,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "db.User"
 SITE_ID = 1
 
-REST_FRAMEWORK ={
-    'DEFAULT_AUTHETICATION_CLASSES':[
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHETICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthetication',
     ],
-    
-    'DEFAULT_PERMISSION_CLASSES':[
+
+    'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
         'rest_framework.permissions.AllowAny',
-    ]
+    ],
+
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20
 }
 
 # Email settings
