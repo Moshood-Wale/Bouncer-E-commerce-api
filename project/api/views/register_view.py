@@ -28,7 +28,7 @@ class RegisterView(CreateAPIView):
                     return Response({"message": "User with this email already exists"}, status=status.HTTP_400_BAD_REQUEST)
                 # Verification link
                 current_site = get_current_site(request).domain
-                absolute_url = f'http://{current_site}/otp/verify'
+                absolute_url = f'http://{current_site}/ap1/v1/otp/verify'
 
                 message = f'''
                     Hi {first_name[0]},\n
