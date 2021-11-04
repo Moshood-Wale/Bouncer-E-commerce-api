@@ -28,4 +28,3 @@ class VerifyOTPView(generics.GenericAPIView):
                 return Response({"error": "Account not verified. Please provide a valid code"},
                                 status=status.HTTP_400_BAD_REQUEST)  
         return Response({"message": "Please enter the email and otp code sent to you"}, status=status.HTTP_400_BAD_REQUEST)
-        
